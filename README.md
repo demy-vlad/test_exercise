@@ -16,5 +16,5 @@ python3 main.py
 # OR
 
 pytest -s -v
-# The run the pytest
+# The run of the pytest
 ```
