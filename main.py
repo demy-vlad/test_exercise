@@ -1,10 +1,12 @@
 from parsing_bytes import test_data, device_settings, parsed_data, field1, field4 ,field8
 
+
 def conversion_to_bynary():
     '''Преобразование в двоичный'''
     dec = int(test_data[0][0], 16)
     bynar = bin(dec)
     get_device_settings(bynar)
+
 
 def get_device_settings(bynar):
     '''Получаем bynary, пробегаемся циклом и получаем значения ключей [size, 'field_name']'''
@@ -55,10 +57,11 @@ def get_data_from_payload(change_to_decimal, field_name):
         parsed_data.update({field_name: field8[str(change_to_decimal)]})
 
 
-def get_parsed_data():
+def get_parsed_data() -> str:
     '''Получаем рузультат'''
     print(parsed_data)
     return parsed_data
+
 
 
 if __name__ == '__main__':
